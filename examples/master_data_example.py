@@ -5,7 +5,6 @@ Demonstrates downloading master contract data for brokers
 
 from india_stocks_api.master_data import (
     download_master_data,
-    download_all_masters,
 )
 from india_stocks_api.auth import (
     authenticate_broker,
@@ -44,11 +43,11 @@ def main():
     master_result = download_master_data(broker_name)
     
     if master_result["status"] == "success":
-        print(f"✅ Master data download successful!")
+        print("✅ Master data download successful!")
         print(f"   Message: {master_result['message']}")
         print(f"   ✓ All contracts for {broker_name} have been downloaded and stored")
     else:
-        print(f"❌ Master data download failed!")
+        print("❌ Master data download failed!")
         print(f"   Error: {master_result['message']}")
     
     print()

@@ -18,6 +18,8 @@ setup(
         "pandas",
         "numpy",
         "pyotp",
+        "python-dotenv",
+        "httpx",
     ],
     classifiers=[
         "Development Status :: 5 - Production/Stable",
